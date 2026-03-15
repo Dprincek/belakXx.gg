@@ -9,28 +9,22 @@
         :root {
             --primary-bg: #09090b;
             --accent-color: #3b82f6; 
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-bg: rgba(0, 0, 0, 0.6); /* Adjusted for better contrast on image */
             --card-hover: rgba(255, 255, 255, 0.1);
         }
 
         body {
             margin: 0;
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #020617);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            /* New Background Image */
+            background: url('https://i.redd.it/bzvs0yc51q9e1.jpeg') no-repeat center center fixed;
+            background-size: cover;
             color: white;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         .container {
@@ -44,7 +38,7 @@
             height: 130px;
             border-radius: 50%;
             border: 2px solid var(--accent-color);
-            object-fit: cover; /* Ensures your photo doesn't look stretched */
+            object-fit: cover;
             box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
             transition: transform 0.4s ease;
             margin-bottom: 10px;
@@ -63,7 +57,7 @@
 
         .subtitle {
             font-size: 0.9rem;
-            color: #94a3b8;
+            color: #cbd5e1;
             margin-bottom: 30px;
         }
 
@@ -74,7 +68,7 @@
             gap: 15px;
             text-decoration: none;
             background: var(--card-bg);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px); /* Increased blur for glass effect */
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 16px;
             margin: 12px 0;
@@ -97,7 +91,7 @@
         footer {
             margin-top: 40px;
             font-size: 0.8rem;
-            color: #64748b;
+            color: #94a3b8;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
